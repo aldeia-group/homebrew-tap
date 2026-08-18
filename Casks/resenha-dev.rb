@@ -10,7 +10,7 @@ cask "resenha-dev" do
   desc "Remote-pairing rooms with screen, camera, and microphone sharing"
   homepage "https://resenha.dev/"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Resenha Dev.app"
 
