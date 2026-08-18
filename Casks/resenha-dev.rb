@@ -5,7 +5,7 @@ cask "resenha-dev" do
   version "0.2.0"
   sha256 "2c2d9d5b51426f7fee9f13eaca1500e71643e7d7c1b43af3c5a868e57f5f6a43"
 
-  url "https://github.com/aldeia-group/resenha-dev/releases/download/v#{version}/ResenhaDev.dmg"
+  url "https://github.com/aldeia-group/resenha-dev/releases/download/public-v#{version}/ResenhaDev.dmg"
   name "Resenha Dev"
   desc "Remote-pairing rooms with screen, camera, and microphone sharing"
   homepage "https://resenha.dev/"
@@ -15,7 +15,7 @@ cask "resenha-dev" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Resenha Dev.app"
 
