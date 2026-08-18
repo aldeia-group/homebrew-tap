@@ -1,30 +1,25 @@
-# Template for the Homebrew cask published to aldeia-group/homebrew-tap.
-# The release workflow replaces 0.2.0 and 2c2d9d5b51426f7fee9f13eaca1500e71643e7d7c1b43af3c5a868e57f5f6a43 and pushes the
-# rendered file to Casks/resenha-dev.rb in the tap on every stable release.
+# Template for the unsigned internal cask published to aldeia-group/homebrew-tap.
+# The release workflow replaces 0.2.1 and af1053293dc314ee8a6bc42692915abdb0367c6c38355fb051315d62cd9ce30e and pushes the
+# rendered file to Casks/resenha-dev.rb for every stable team release.
 cask "resenha-dev" do
-  version "0.2.0"
-  sha256 "2c2d9d5b51426f7fee9f13eaca1500e71643e7d7c1b43af3c5a868e57f5f6a43"
+  version "0.2.1"
+  sha256 "af1053293dc314ee8a6bc42692915abdb0367c6c38355fb051315d62cd9ce30e"
 
-  url "https://github.com/aldeia-group/resenha-dev/releases/download/public-v#{version}/ResenhaDev.dmg"
+  url "https://github.com/aldeia-group/resenha-dev/releases/download/v#{version}/ResenhaDev.dmg"
   name "Resenha Dev"
   desc "Remote-pairing rooms with screen, camera, and microphone sharing"
   homepage "https://resenha.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  depends_on macos: :sequoia
+  depends_on macos: ">= :sequoia"
 
   app "Resenha Dev.app"
 
   zap trash: [
-    "~/Library/Application Support/Resenha Dev",
-    "~/Library/Caches/app.resenha.app",
-    "~/Library/Containers/app.resenha.app",
-    "~/Library/HTTPStorages/app.resenha.app",
-    "~/Library/Preferences/app.resenha.app.plist",
-    "~/Library/Saved Application State/app.resenha.app.savedState",
+    "~/Library/Application Support/dev.resenha.internal",
+    "~/Library/Caches/dev.resenha.internal",
+    "~/Library/Containers/dev.resenha.internal",
+    "~/Library/HTTPStorages/dev.resenha.internal",
+    "~/Library/Preferences/dev.resenha.internal.plist",
+    "~/Library/Saved Application State/dev.resenha.internal.savedState",
   ]
 end
