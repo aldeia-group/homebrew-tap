@@ -1,9 +1,9 @@
 # Template for the ad-hoc-signed internal cask published to aldeia-group/homebrew-tap.
-# The release workflow replaces 0.2.4 and 7e1608d5443f319680713fa044aead6e77236cbbebaadc84a569cf1794231819 and pushes the
+# The release workflow replaces 0.2.5 and fc6db4001542c9acc922a12bce8055406d62682fd14982d825fe657597c39bf4 and pushes the
 # rendered file to Casks/resenha-dev.rb for every stable team release.
 cask "resenha-dev" do
-  version "0.2.4"
-  sha256 "7e1608d5443f319680713fa044aead6e77236cbbebaadc84a569cf1794231819"
+  version "0.2.5"
+  sha256 "fc6db4001542c9acc922a12bce8055406d62682fd14982d825fe657597c39bf4"
 
   url "https://github.com/aldeia-group/resenha-dev/releases/download/v#{version}/ResenhaDev.dmg"
   name "Resenha Dev"
